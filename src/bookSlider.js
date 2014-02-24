@@ -9,17 +9,21 @@
         "rotationAngle": -5
       }, options);
       
+      var angles = [];
+      var rotated = {};
 
       var _init = function(list) {
 
         for(var i = 0; i < list.length; i++) {
-          var val= i * options.rotationAngle;
-         
+          var val= (i+1) * options.rotationAngle;
+          $(list[i]).attr('id', "bookSlide"+i);
           $(list[i]).css({
             WebkitTransform: "rotateY("+val+"deg)",
             transform:  "rotateY("+ val+"deg)",
             MozTransform:  "rotateY("+val+ "deg)"
           });
+
+          angles["bookSlide"+i] = val;
         }
       };
       
@@ -28,9 +32,19 @@
 
         $(bookSlider).find('li').each(function(key, val) {
           $(val).on('click', function() {
+            var idElement = $(val).attr('id');
+            var angle = 180;
+            if (typeof rotated[idElement] === "undefined") {
+              angle = -angle;
+              rotated[idElement] = true;
+
+            }
+            else {
+              delete rotated[idElement];
+            }
 
             $(val).css({
-             transform :"rotateY(-180deg)"
+             transform :"rotateY("+angle+"deg)"
             });
 
           });
