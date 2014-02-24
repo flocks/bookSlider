@@ -6,14 +6,14 @@
       
       var options = $.extend({
         "rotationSpeed" : 2,
-        "rotationAngle": 2
+        "rotationAngle": -5
       }, options);
       
 
       var _init = function(list) {
 
         for(var i = 0; i < list.length; i++) {
-          var val= i * -10;
+          var val= i * options.rotationAngle;
          
           $(list[i]).css({
             WebkitTransform: "rotateY("+val+"deg)",

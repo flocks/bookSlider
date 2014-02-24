@@ -5,6 +5,14 @@ body {
   background: url(light_grey.png);
 }
 
+#wip {
+  position: absolute;
+  bottom: 100px;
+  margin-left: auto;
+  width: 100%;
+  text-align: center;
+}
+
 #wrapper {
   width: 500px;
   margin:auto;
