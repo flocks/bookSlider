@@ -11,11 +11,16 @@
       
       
        return this.each(function(key, bookSlider) {
-         console.log(bookSlider);
+        
         $(bookSlider).find('li').each(function(key, val) {
-          val.css({
-            '-webkit-transform': 'rotateY(2deg)'
-          })
+          $(val).on('click', function() {
+            console.log("la");
+            $(val).css({
+             transform :"rotateY(-180deg)"
+            });
+
+            console.log($(val).css('transform'));
+          });
         });
        });
     };

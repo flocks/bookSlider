@@ -1,31 +1,54 @@
 /* Styles go here */
 
+
+body {
+  background: url(light_grey.png);
+}
+
+#wrapper {
+  width: 500px;
+  margin:auto;
+
+  margin-top: 50px;
+  position:relative;
+
+}
+
+strong {
+  color: #FF7000;
+}
+#desc {
+  position:absolute;
+  left: 500px;
+  top: 120px;
+  width: 200px;
+  font-size: 20pt;
+  letter-spacing: 1px;
+}
 .sliderBook {
-  margin-top: 50px;margin-left: 200px;
   list-style-type: none;
   position: relative;
   
-  -webkit-perspective : 1000px;
+  -webkit-perspective : 1500px;
   -webkit-transform-style: preserve-3d;
-  
+  -webkit-transform: rotateX(-5deg) rotateY(0deg);
 
 }
 
 .sliderBook li {
-  width: 300px;
-  height: 300px;
-  border-left: 2px solid black;
+  width: 400px;
+  height: 400px;
+  border-left: 20 px solid black;
   position: absolute;
   background-color: white;
   transition: all 2s ease;
   -webkit-transform-origin: top left;
+
+  border: 5px solid #000;
   border-left: 4px solid black;
 
 }
 
-.sliderBook li:hover {
-  -webkit-transform: rotateY(-180deg);
-}
 
 .sliderBook li img {
    height: 100%;
@@ -33,19 +56,21 @@
 }
 
 .p1 {
-   -webkit-transform: rotateY(-22deg);
-   border-right: 4px solid black !important;
-   border-radius: 5px;
+   -webkit-transform: rotateY(-30deg);@
 }
 
 .p2 {
-  -webkit-transform: rotateY(-20deg);
+  -webkit-transform: rotateY(-22deg);
 }
 
 .p3 {
-  -webkit-transform: rotateY(-18deg);
+  -webkit-transform: rotateY(-14deg);
 }
 
 .p4 {
-   -webkit-transform: rotateY(-16deg);
+   -webkit-transform: rotateY(-6deg);
+}
+
+.p5 {
+   -webkit-transform: rotateY(0deg);
 }
