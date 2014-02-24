@@ -37,7 +37,10 @@
           var desc = $(val).find('p');
 
           $(val).on('mouseenter', function() {
-            desc.show('slow');
+            if (typeof rotated[$(val).attr('id')] === "undefined") {
+              desc.show('slow');
+            }
+            
           });
 
           $(val).on('mouseleave', function() {
