@@ -65,11 +65,10 @@ strong {
 
 .sliderBook li p {
   box-sizing: border-box;
-  border-box: ;
   padding: 50px;
   display: none;
   position: absolute;
-  bottom: -14px;
+  bottom: -16px;
   background-color: black;
   color: white;
   opacity: 0.8;
@@ -77,24 +76,3 @@ strong {
   height: 100%;
 }
 
-/*
-.p1 {
-   -webkit-transform: rotateY(-30deg);@
-}
-
-.p2 {
-  -webkit-transform: rotateY(-22deg);
-}
-
-.p3 {
-  -webkit-transform: rotateY(-14deg);
-}
-
-.p4 {
-   -webkit-transform: rotateY(-6deg);
-}
-
-.p5 {
-   -webkit-transform: rotateY(0deg);
-}
-*/
