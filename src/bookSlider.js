@@ -34,6 +34,16 @@
         _init($(bookSlider).find('li'));
 
         $(bookSlider).find('li').each(function(key, val) {
+          var desc = $(val).find('p');
+
+          $(val).on('mouseenter', function() {
+            desc.show('slow');
+          });
+
+          $(val).on('mouseleave', function() {
+            desc.hide();
+          });
+
           $(val).on('click', function() {
             var idElement = $(val).attr('id');
             var angle = -180;
