@@ -12,10 +12,12 @@
       var angles = {};
       var rotated = {};
       var nbRotated = 0;
+      var nbSide = 0;
 
       var _init = function(list) {
 
         for(var i = 0; i < list.length; i++) {
+          nbSide++;
           var val= (i+1) * options.rotationAngle;
           $(list[i]).attr('id', "bookSlide"+i);
           $(list[i]).css({
@@ -42,8 +44,7 @@
 
             }
             else {
-              angle = 180 -  (nbRotated+1) * options.rotationAngle;
-
+              angle = angles[idElement];
               nbRotated--;
               delete rotated[idElement];
             }
