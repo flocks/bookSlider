@@ -9,8 +9,9 @@
         "rotationAngle": -5
       }, options);
       
-      var angles = [];
+      var angles = {};
       var rotated = {};
+      var nbRotated = 0;
 
       var _init = function(list) {
 
@@ -33,13 +34,17 @@
         $(bookSlider).find('li').each(function(key, val) {
           $(val).on('click', function() {
             var idElement = $(val).attr('id');
-            var angle = 180;
+            var angle = -180;
             if (typeof rotated[idElement] === "undefined") {
-              angle = -angle;
+              angle =  angle - (nbRotated+1) * options.rotationAngle;
+              nbRotated++;
               rotated[idElement] = true;
 
             }
             else {
+              angle = 180 -  (nbRotated+1) * options.rotationAngle;
+
+              nbRotated--;
               delete rotated[idElement];
             }
 
