@@ -6,7 +6,7 @@
       
       var options = $.extend({
         "rotationSpeed" : 2,
-        "rotationAngle": -5
+        "rotationAngle": -3
       }, options);
       
       var angles = {};
