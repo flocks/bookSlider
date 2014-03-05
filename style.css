@@ -5,6 +5,14 @@ body {
   background: url(light_grey.png);
 }
 
+#wip {
+  position: absolute;
+  bottom: 100px;
+  margin-left: auto;
+  width: 100%;
+  text-align: center;
+}
+
 #wrapper {
   width: 500px;
   margin:auto;
@@ -41,7 +49,7 @@ strong {
   border-left: 20 px solid black;
   position: absolute;
   background-color: white;
-  transition: all 2s ease;
+  transition: all 1s ease;
   -webkit-transform-origin: top left;
 
   border: 5px solid #000;
@@ -55,22 +63,16 @@ strong {
    width: 100%;
 }
 
-.p1 {
-   -webkit-transform: rotateY(-30deg);@
+.sliderBook li p {
+  box-sizing: border-box;
+  padding: 50px;
+  display: none;
+  position: absolute;
+  bottom: -16px;
+  background-color: black;
+  color: white;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
 }
 
-.p2 {
-  -webkit-transform: rotateY(-22deg);
-}
-
-.p3 {
-  -webkit-transform: rotateY(-14deg);
-}
-
-.p4 {
-   -webkit-transform: rotateY(-6deg);
-}
-
-.p5 {
-   -webkit-transform: rotateY(0deg);
-}
